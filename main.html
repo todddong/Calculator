@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Todd's Calculator</title> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="styles.css">
+   
+    <meta name="description" content="Online Calculator">
+    <meta name="keywords" content="calculator, online calculator, math, arithmetic">
+    <meta name="author" content="Todd Dong">
+
+</head>
+<body id = "body">
+    <script defer src="script.js"></script>
+
+    <div id = "container">
+        <header>
+            <h1 id = "title">&nbsp; cool calculator</h1>
+        </header>
+
+        <div id="calculator">
+
+            <div class="display" > <!-- where numbers are displayed -->
+                <input id="display" readonly autofocus>
+            </div>
+
+            <div id="keys">
+
+                <button onclick = "addToDisplay('+')" class="btn operator" id="add">+</button>
+
+                <button onclick = "addToDisplay('7')" id="7">7</button>
+                <button onclick = "addToDisplay('8')" id="8">8</button>
+                <button onclick = "addToDisplay('9')" id="9">9</button>
+
+                <button onclick = "addToDisplay('-')" class="btn operator" id="sub">-</button>
+
+                <button onclick = "addToDisplay('4')" id="4">4</button>
+                <button onclick = "addToDisplay('5')" id="5">5</button>
+                <button onclick = "addToDisplay('6')" id="6">6</button>
+
+                <button onclick = "addToDisplay('*')" class="btn operator" id="multiply">*</button>
+
+                <button onclick = "addToDisplay('1')" id="1">1</button>
+                <button onclick = "addToDisplay('2')" id="2">2</button>
+                <button onclick = "addToDisplay('3')" id="3">3</button>
+
+                <button onclick = "addToDisplay('/')" class="btn operator" id="divide">/</button>
+
+                <button onclick = "addToDisplay('0')" id="0">0</button>
+               
+
+                <button onclick = "addToDisplay('.')" id=".">.</button>
+                <button onclick = "addToDisplay('3.14')" id="π">π</button>
+
+                <button onclick = "addToDisplay('^')" class="btn operator" id="exp">^</button>
+                <button onclick = "calculateDisplay()" id="=">=</button>
+
+
+                <button onclick = "clearDisplay()" class="btn" id="clear">clear</button>
+                <button onclick = "backspaceDisplay()" class="btn" id="backspace">back</button>
+            
+
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
