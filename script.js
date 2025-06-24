@@ -33,8 +33,12 @@ function addToDisplay(input){
             }
         }
 
-        else if (input == '-' && (operators.includes(lastChar) || display.value == '')){ // input is minus sign and last char is operator or display is empty
-            display.value += ' ' + input;
+        else if (input == '-'){
+            if (display.value == '' || operators.includes(lastChar)){      // unary minus
+                display.value += '-';
+            } else {                                                       // binary minus
+                display.value += ' - ';    // ← space before *and* after
+            }
         }
 
         else if (input == '0' && lastChar == '0'){
@@ -123,11 +127,10 @@ document.addEventListener('keydown', e => {
 
   const allowed = '0123456789+-*/%^.';
   if (allowed.includes(e.key)) {
-    addToDisplay(e.key);
+    addToDisplay('' + e.key);
     e.preventDefault();
     return;
   }
 
 });
-
 
